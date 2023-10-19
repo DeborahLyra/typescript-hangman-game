@@ -1,0 +1,156 @@
+$primary-color: lavender;
+$secondary-color: #5d0d93d1;
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color:$primary-color;
+    color: $secondary-color;
+    font-family: "Roboto", sans-serif;
+  }
+
+  h1{
+    margin-bottom: 1rem;
+  }
+  .hint-text{
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+  
+  .game-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+  }
+  
+  .hanger {
+    fill: transparent;
+    stroke: $secondary-color;
+    stroke-width: 4px;
+    stroke-linecap: round;
+  }
+  
+  .hanger-body{
+    display: none;
+  }
+
+  .incorrect-guesses{
+    font-size: 1rem;
+  }
+
+
+  .left-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wrong-letter-container {
+    font-size: 1.2rem;
+  }
+  
+  .wrong-letter-container span {
+    margin-left: 3px;
+  }
+
+  .wrong-letter{
+    height: 2rem;
+  }
+  .secret-word-container {
+    font-size: 45px;
+    margin-top: 1rem;
+  }
+  
+  .alert-repeated-word {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -100px;
+    transition:transform 0.2s ease-in-out;
+  }
+  
+  .alert-repeated-word p {
+    margin: 0;
+  }
+  
+  .alert-repeated-word.show {
+   transform: translateY(-110px);
+  }
+  
+  .secret-word-container span {
+    margin: 0 5px;
+  }
+  
+  .popup-container {
+    background-color: rgba(0, 0, 0, 0.849);
+    color: #ffff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup {
+    background:$secondary-color;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .popup button {
+    cursor: pointer;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  
+
+  .keyboard{
+   margin: 2rem;
+    width: 400px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 20px;
+  }
+
+  .btn{
+    padding: 2px 18px;
+    margin: 2px;
+    background-color: $secondary-color;
+    color:$primary-color;
+    border-radius: 3px;
+    border: 1px solid $secondary-color;
+    cursor: pointer;
+    line-height: 1rem;
+  }
+
+  .btn:hover{
+    background-color: $primary-color;
+    color:$secondary-color;
+    border: 1px solid $secondary-color;
+  }
+
+  .btn:focus{
+    outline: none;
+  }
